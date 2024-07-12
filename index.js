@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 4000;
 const app = express();
 
 const corsOptions = {
-  origin: 'https://write-x-frontend.vercel.app/',  // Your frontend URL
+  origin: 'https://write-x-frontend.vercel.app',  // Your frontend URL without the trailing slash
   optionsSuccessStatus: 200
 };
 
@@ -20,7 +20,7 @@ const blogrouter = require("./Routes/blog.routes");
 app.use("/blog", blogrouter);
 
 const userrouter = require("./Routes/user.route");
-app.use("/user",userrouter);
+app.use("/user", userrouter);
 
 app.listen(PORT, () => {
   console.log("Server is Up Bro");
