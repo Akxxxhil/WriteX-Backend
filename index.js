@@ -1,12 +1,19 @@
 const express = require("express");
 require("dotenv").config();
-const app = express();
+
 const cors = require("cors");
 
-app.use(express.json());
-app.use(cors());
+
 
 const PORT = process.env.PORT || 4000;
+const app = express();
+const corsOptions = {
+  origin: 'https://write-x-frontend.vercel.app/',  // Your frontend URL
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
+app.use(express.json());
 
 const DataBase = require("./DataBase/Db");
 DataBase();
