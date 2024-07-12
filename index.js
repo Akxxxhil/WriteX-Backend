@@ -17,10 +17,10 @@ const DataBase = require("./DataBase/Db");
 DataBase();
 
 const blogrouter = require("./Routes/blog.routes");
-app.use("/app/v1/blog", blogrouter);
+app.use("/blog", blogrouter);
 
 const userrouter = require("./Routes/user.route");
-app.use("/app/v1/user",userrouter);
+app.use("/user",userrouter);
 
 app.listen(PORT, () => {
   console.log("Server is Up Bro");
