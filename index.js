@@ -1,12 +1,10 @@
 const express = require("express");
 require("dotenv").config();
-
 const cors = require("cors");
-
-
 
 const PORT = process.env.PORT || 4000;
 const app = express();
+
 const corsOptions = {
   origin: 'https://write-x-frontend.vercel.app/',  // Your frontend URL
   optionsSuccessStatus: 200
