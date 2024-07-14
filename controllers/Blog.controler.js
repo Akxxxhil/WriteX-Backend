@@ -34,7 +34,7 @@ exports.createBlog = async (req, res) => {
         const newBlog = await blog.create({
             title,
             description,
-            user: req.user.userID,
+            user: req.user.id,
               // Ensure this is correctly set from req.user
         });
 
